@@ -5,4 +5,4 @@ myList = []
 for ele in str1.split("&"):
     myList.append(ele.split("="))
 
-print(myList)
+print(dict(myList))
