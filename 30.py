@@ -5,6 +5,7 @@
 # Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
 prices = [7, 1, 5, 3, 6, 4]
+print("Way-1")
 max_profit = float('-inf')
 
 for i in range(len(prices)):
@@ -14,6 +15,22 @@ for i in range(len(prices)):
             max_profit = max(profit, max_profit)
 
 if max_profit > float('-inf'):
-    print(max_profit)
+    print("Maximum Profit: ",max_profit)
 else:
-    print(0)
+    print("Maximum Profit: ",0)
+
+
+print("Way-2")
+min_price = float('inf')
+max_profit = 0
+
+for price in prices:
+    if price < min_price:
+        min_price = price
+            
+    profit = price - min_price
+
+    if profit > max_profit:
+        max_profit = profit
+
+print("Maximum Profit: ",max_profit)
