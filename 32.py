@@ -3,6 +3,7 @@
 
 nums = [1, 2, 3, 4]
 
+print("Way-1")
 l_mult = 1
 r_mult = 1
 
@@ -22,3 +23,18 @@ for i in range(n):
 result = [l * r for l, r in zip(l_arr, r_arr)]
 
 print(f"Given the array {nums}, the product of all elements except the current one is: {result}")
+
+
+print("Way-2")
+res = [1]*len(nums)
+prefix = 1
+
+for i in range(len(nums)):
+    res[i] = prefix
+    prefix *= nums[i]
+postfix = 1
+
+for i in range(len(nums)-1, -1, -1):
+    res[i] *= postfix
+    postfix *= nums[i]
+print(res)
