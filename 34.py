@@ -1,0 +1,14 @@
+# Find the complement of the given number
+
+def complement(num):
+    binary = bin(num)[2:]
+    complement = ''
+    for bit in binary:
+        if bit =="1":
+            complement += '0'
+        else:
+            complement += '1'
+    return(int(complement,2))
+
+n = int(input("Enter the number to find complement: "))
+print(complement(n))
