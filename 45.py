@@ -1,4 +1,7 @@
-s = input()
+# If the given string contains >=4 consecutive consonants then it is hard to pronounce
+# For the given string find out weather the string is hard to pronounce or not
+
+s = input("Enter the string: ")
 s = s.lower()
 
 vowels = ['a','e','i','i','o','u']
